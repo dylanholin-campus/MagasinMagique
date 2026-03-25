@@ -54,6 +54,17 @@ Ce projet démontre un refactoring réussi utilisant le Pattern Strategy pour tr
 
 ---
 
+### 5. **[TDD_POUVOIRS_MAGIQUES.md](./TDD_POUVOIRS_MAGIQUES.md)**
+**Contenu :** Démarche TDD pour l'ajout de "Pouvoirs magiques"
+- 🔴 RED : Tests écrits avant le code
+- 🟢 GREEN : Implémentation minimale
+- 🔵 REFACTOR : Nettoyage sans casser les tests
+- 📋 Fichiers concernés et résumé
+
+**Pour qui :** Évaluation de la démarche TDD
+
+---
+
 ## 🚀 Documentation Technique
 
 ### **Code Source Commenté**
