@@ -253,9 +253,6 @@ public class Magasin {
 ### Métriques d'amélioration :
 - **Complexité cyclomatique** : Réduite de 15 à 1
 - **Lignes de code** : 60 → 4 dans la méthode principale
-- **Testabilité** : 100% (chaque stratégie testable unitairement)
-- **Maintenabilité** : Excellente (ajout simple de nouveaux types)
+- **Testabilité** : Chaque stratégie testable unitairement
+- **Maintenabilité** : Ajout d'un nouveau type = 1 classe + 1 case
 
----
-
-**Le Pattern Strategy transforme un code fragile et complexe en une architecture robuste et évolutive !** 🚀
