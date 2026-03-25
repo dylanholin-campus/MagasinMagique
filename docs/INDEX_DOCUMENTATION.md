@@ -43,6 +43,17 @@ Ce projet démontre un refactoring réussi utilisant le Pattern Strategy pour tr
 
 ---
 
+### 4. **[COVERAGE_GUIDE.md](./COVERAGE_GUIDE.md)**
+**Contenu :** Guide du coverage de code
+- 📊 Pourquoi le coverage est utile ici
+- 🎯 Résultats actuels par package
+- 🔍 Ce que le coverage révèle
+- 🛠️ Comment l'utiliser et l'améliorer
+
+**Pour qui :** Développeurs et équipe technique (qualité du code)
+
+---
+
 ## 🚀 Documentation Technique
 
 ### **Code Source Commenté**
@@ -62,6 +73,12 @@ Ce projet démontre un refactoring réussi utilisant le Pattern Strategy pour tr
 ```bash
 # Tests JUnit via Gradle
 ./gradlew test
+
+# Tests avec coverage
+./gradlew test jacocoTestReport
+
+# Vérification des objectifs de coverage
+./gradlew jacocoTestCoverageVerification
 
 # Test complet du projet
 ./test-simple.sh
