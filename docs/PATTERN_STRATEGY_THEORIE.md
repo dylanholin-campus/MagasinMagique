@@ -104,28 +104,31 @@ public class KryptoniteUpdater implements ItemUpdater {
 public class PassVIPUpdater implements ItemUpdater {
     @Override
     public void update(Item item) {
-        // La date de péremption diminue
-        item.sellIn = item.sellIn - 1;
-        
-        // Si le concert est passé, la qualité tombe à 0
-        if (item.sellIn < 0) {
-            item.quality = 0;
-            return;
-        }
-        
         // La qualité augmente chaque jour
         if (item.quality < 50) {
             item.quality = item.quality + 1;
+
+            // 10 jours ou moins : +1 supplémentaire
+            if (item.sellIn < 11) {
+                if (item.quality < 50) {
+                    item.quality = item.quality + 1;
+                }
+            }
+
+            // 5 jours ou moins : +1 supplémentaire
+            if (item.sellIn < 6) {
+                if (item.quality < 50) {
+                    item.quality = item.quality + 1;
+                }
+            }
         }
-        
-        // 10 jours ou moins : qualité augmente de 2
-        if (item.sellIn < 10 && item.quality < 50) {
-            item.quality = item.quality + 1;
-        }
-        
-        // 5 jours ou moins : qualité augmente de 3
-        if (item.sellIn < 5 && item.quality < 50) {
-            item.quality = item.quality + 1;
+
+        // La date de péremption diminue
+        item.sellIn = item.sellIn - 1;
+
+        // Si le concert est passé, la qualité tombe à 0
+        if (item.sellIn < 0) {
+            item.quality = item.quality - item.quality;
         }
     }
 }

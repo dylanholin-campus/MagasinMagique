@@ -60,6 +60,9 @@ Ce projet démontre un refactoring réussi utilisant le Pattern Strategy pour tr
 ## 📋 Commandes Rapides
 
 ```bash
+# Tests JUnit via Gradle
+./gradlew test
+
 # Test complet du projet
 ./test-simple.sh
 
@@ -84,7 +87,7 @@ java -cp src/main/java com.magasin.utils.TestPouvoirsMagiques
 - ✅ **Nouvelle fonctionnalité** ("Pouvoirs magiques")
 
 ### **Qualité Logicielle :**
-- ✅ **Tests automatisés** (18/19 réussis)
+- ✅ **Tests automatisés** (18/18 tests JUnit réussis)
 - ✅ **Documentation complète** (français)
 - ✅ **GitHub Actions** configuré
 - ✅ **Code 100% commenté**
@@ -99,7 +102,7 @@ java -cp src/main/java com.magasin.utils.TestPouvoirsMagiques
 
 ## 📊 Métriques d'Impact
 
-| **Aspect** | **AvANT** | **APRÈS** | **Amélioration** |
+| **Aspect** | **AVANT** | **APRÈS** | **Amélioration** |
 |------------|-----------|-----------|------------------|
 | **Lignes de code** | 60 | 4 | **-93%** |
 | **Complexité** | 15 | 1 | **-93%** |

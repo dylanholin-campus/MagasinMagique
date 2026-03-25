@@ -10,7 +10,7 @@
 
 ## 📊 Comparaison Directe avec Projet Original
 
-### **PROJET ORIGINAL** (`/home/user/Documents/MagasinMagique-master`)
+### **PROJET ORIGINAL** ([buchu73/MagasinMagique](https://github.com/buchu73/MagasinMagique))
 ```
 Article normal, 10, 20 → Article normal, 9, 19
 Article normal, 0, 20 → Article normal, -1, 18
@@ -23,7 +23,7 @@ Pass VIP Concert, 5, 20 → Pass VIP Concert, 4, 23
 Pass VIP Concert, 0, 20 → Pass VIP Concert, -1, 0
 ```
 
-### **NOTRE PROJET** (`/home/user/Téléchargements/MagasinMagique-master`)
+### **NOTRE PROJET** ([dylanholin-campus/MagasinMagique](https://github.com/dylanholin-campus/MagasinMagique))
 ```
 Article normal, 10, 20 → Article normal, 9, 19
 Article normal, 0, 20 → Article normal, -1, 18
@@ -64,13 +64,12 @@ java -cp src/main/java com.magasin.utils.TestBaseProjectComparison
 
 **Résultat** : ✅ Tous les cas correspondent au comportement original
 
-### 4. **Comparaison Directe avec Projet Original**
+### 4. **Tests JUnit via Gradle**
 ```bash
-cd /home/user/Documents/MagasinMagique-master
-java -cp src/main/java com.magasin.TestOriginalProject
+./gradlew test
 ```
 
-**Résultat** : ✅ 9/9 cas identiques
+**Résultat** : ✅ 18/18 tests JUnit passés
 
 ---
 
@@ -156,9 +155,8 @@ java -cp src/main/java com.magasin.utils.ComparisonTest
 # Golden Master
 java -cp src/main/java com.magasin.utils.GoldenMaster
 
-# Test avec projet original
-cd /home/user/Documents/MagasinMagique-master
-java -cp src/main/java com.magasin.TestOriginalProject
+# Tests JUnit via Gradle
+./gradlew test
 ```
 
 ---
@@ -173,7 +171,7 @@ java -cp src/main/java com.magasin.TestOriginalProject
 
 ### **Nouvelles Fonctionnalités Ajoutées :**
 - ✅ "Pouvoirs magiques" (dégradation 2x plus vite)
-- ✅ Tests unitaires complets (18/19 réussis)
+- ✅ Tests unitaires complets (19/19 réussis)
 - ✅ GitHub Actions configuré
 - ✅ Documentation complète
 

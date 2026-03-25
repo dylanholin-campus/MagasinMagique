@@ -31,9 +31,9 @@ for (int i = 0; i < items.length; i++) {
 
 ```java
 // Nouvelle méthode updateQuality()
-for (int i = 0; i < items.length; i++) {
-    ItemUpdater updater = ItemUpdaterFactory.getUpdater(items[i]);
-    updater.update(items[i]);
+for (Item item : items) {
+    ItemUpdater updater = ItemUpdaterFactory.getUpdater(item);
+    updater.update(item);
 }
 ```
 
@@ -99,7 +99,7 @@ Pouvoirs magiques (5,20) → (4,18) → (3,16) → (2,14)...
 java -cp src/main/java com.magasin.utils.SimpleTestRunner
 ```
 
-**Résultat** : ✅ 18/19 tests passent
+**Résultat** : ✅ 19/19 tests passent
 
 ### 3. **GitHub Actions CI/CD**
 
@@ -145,6 +145,9 @@ java -cp src/main/java com.magasin.utils.SimpleTestRunner
 ## 📋 Commandes de Test Disponibles
 
 ```bash
+# Tests JUnit via Gradle
+./gradlew test
+
 # Test complet du projet
 ./test-simple.sh
 
