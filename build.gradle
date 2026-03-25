@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'jacoco'
 }
 
 group 'com.magasin'
@@ -23,5 +24,56 @@ test {
     testLogging {
         events "passed", "skipped", "failed"
         exceptionFormat "full"
+    }
+}
+
+jacoco {
+    toolVersion = "0.8.8"
+}
+
+jacocoTestReport {
+    reports {
+        xml.required = true
+        html.required = true
+    }
+}
+
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            // Règle générale : 20% minimum (réaliste pour ce projet)
+            limit {
+                minimum = 0.20
+            }
+        }
+        rule {
+            // Code métier : 80% minimum (objectif atteignable)
+            element = 'PACKAGE'
+            includes = ['com.magasin.updaters']
+            limit {
+                minimum = 0.80
+            }
+        }
+        rule {
+            // Classes principales : 90% minimum (actuel 96%)
+            element = 'CLASS'
+            includes = ['com.magasin.MagasinRefactored']
+            limit {
+                minimum = 0.90
+            }
+        }
+        rule {
+            // Factory : 85% minimum (actuel 90%)
+            element = 'CLASS'
+            includes = ['com.magasin.ItemUpdaterFactory']
+            limit {
+                minimum = 0.85
+            }
+        }
+        rule {
+            // Exclure les classes legacy et utils du calcul général
+            element = 'CLASS'
+            excludes = ['com.magasin.Magasin', 'com.magasin.utils.**']
+        }
     }
 }
