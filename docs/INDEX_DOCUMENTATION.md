@@ -106,8 +106,8 @@ java -cp src/main/java com.magasin.utils.TestPouvoirsMagiques
 |------------|-----------|-----------|------------------|
 | **Lignes de code** | 60 | 4 | **-93%** |
 | **Complexité** | 15 | 1 | **-93%** |
-| **Testabilité** | Complexe | Simple | **+100%** |
-| **Extensibilité** | Difficile | Facile | **+∞** |
+| **Testabilité** | Difficile (tout couplé) | Chaque stratégie isolée | Améliorée |
+| **Extensibilité** | Modifier tout le code | Ajouter 1 classe | Améliorée |
 
 ---
 

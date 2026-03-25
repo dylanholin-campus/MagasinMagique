@@ -51,7 +51,7 @@ NormalItemUpdater | ComteUpdater | KryptoniteUpdater | PassVIPUpdater | Pouvoirs
 |----------|-------|-------|--------------|
 | Lignes de code | 60 | 4 | -93% |
 | Complexité cyclomatique | 15 | 1 | -93% |
-| Testabilité | Complexe | Simple | +100% |
+| Testabilité | Difficile (tout couplé) | Chaque stratégie isolée | Améliorée |
 | Extensibilité | Difficile | Facile | Améliorée |
 
 ## Documentation

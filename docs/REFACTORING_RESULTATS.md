@@ -47,8 +47,8 @@ for (Item item : items) {
 | **Complexité cyclomatique** | 15 | 1 | **-93%** |
 | **Niveaux d'imbrication** | 13 | 0 | **-100%** |
 | **Nombre de conditions** | 13 if/else | 1 switch | **-92%** |
-| **Testabilité** | Complexe | Simple | **+100%** |
-| **Maintenance** | Risquée | Sûre | **+∞** |
+| **Testabilité** | Difficile (tout couplé) | Chaque stratégie isolée | Améliorée |
+| **Maintenance** | Risquée (effet de bord) | Isolée par classe | Améliorée |
 
 ---
 
@@ -116,7 +116,7 @@ java -cp src/main/java com.magasin.utils.SimpleTestRunner
 
 | **Aspect** | **Bénéfice** |
 |------------|--------------|
-| **Lisibilité** | Code 4x plus lisible |
+| **Lisibilité** | Code plus lisible (4 lignes vs 60) |
 | **Debugging** | Isolation des problèmes |
 | **Tests** | Tests unitaires simples |
 | **Documentation** | Auto-documenté par structure |
@@ -135,10 +135,10 @@ java -cp src/main/java com.magasin.utils.SimpleTestRunner
 
 | **Aspect** | **Impact** |
 |------------|-----------|
-| **Maintenance** | Coût réduit de 80% |
-| **Évolution** | Nouveaux types d'items en 2 minutes |
-| **Qualité** | Zéro régression |
-| **Délivraison** | Déploiement plus rapide et sûr |
+| **Maintenance** | Modifier 1 classe au lieu de 60 lignes |
+| **Évolution** | Ajouter 1 classe + 1 case dans la Factory |
+| **Qualité** | 12/12 items identiques à l'original |
+| **Délivraison** | Tests automatisés via Gradle |
 
 ---
 
@@ -178,8 +178,7 @@ java -cp src/main/java com.magasin.utils.TestPouvoirsMagiques
 
 ### **Impact Mesurable :**
 
-- 🚀 **Productivité** : +300% pour les nouvelles fonctionnalités
-- 🔒 **Sécurité** : Zéro régression
+- � **Sécurité** : 12/12 items identiques, zéro régression
 - 📚 **Maintenabilité** : Architecture documentée et testée
 - ⚡ **Performance** : Même performance, code plus propre
 
