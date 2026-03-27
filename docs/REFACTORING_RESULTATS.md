@@ -99,7 +99,9 @@ Pouvoirs magiques (5,20) → (4,18) → (3,16) → (2,14)...
 java -cp src/main/java com.magasin.utils.SimpleTestRunner
 ```
 
-**Résultat** : ✅ 19/19 tests passent
+**Résultat** : ✅ 19/19 tests passent (runner manuel)
+
+> Note : les tests JUnit officiels sont 18/18 via `./gradlew test`
 
 ### 3. **GitHub Actions CI/CD**
 

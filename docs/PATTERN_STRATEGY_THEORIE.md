@@ -21,7 +21,7 @@ Le **Pattern Strategy** permet de définir une famille d'algorithmes, d'encapsul
 
 ```
 ┌─────────────────┐
-│   Context       │ ← Magasin
+│   Context       │ ← MagasinRefactored
 └────────┬────────┘
          │ utilise
          ▼
@@ -68,10 +68,6 @@ public class NormalItemUpdater implements ItemUpdater {
             item.quality = item.quality - 1;
         }
         
-        // La qualité ne peut jamais être négative
-        if (item.quality < 0) {
-            item.quality = 0;
-        }
     }
 }
 
@@ -128,7 +124,7 @@ public class PassVIPUpdater implements ItemUpdater {
 
         // Si le concert est passé, la qualité tombe à 0
         if (item.sellIn < 0) {
-            item.quality = item.quality - item.quality;
+            item.quality = 0;
         }
     }
 }
@@ -181,17 +177,17 @@ public class ItemUpdaterFactory {
 ### Étape 4: Utiliser les stratégies dans le contexte
 
 ```java
-public class Magasin {
-    Item[] items;
+public class MagasinRefactored {
+    public Item[] items;
 
-    public Magasin(Item[] items) {
+    public MagasinRefactored(Item[] items) {
         this.items = items;
     }
 
     public void updateQuality() {
-        for (int i = 0; i < items.length; i++) {
-            ItemUpdater updater = ItemUpdaterFactory.getUpdater(items[i]);
-            updater.update(items[i]);
+        for (Item item : items) {
+            ItemUpdater updater = ItemUpdaterFactory.getUpdater(item);
+            updater.update(item);
         }
     }
 }

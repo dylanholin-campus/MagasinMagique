@@ -134,7 +134,7 @@ Vérification que les **18 tests existants passent toujours** (comportement d'or
 |-------|--------|-------|
 | 🔴 RED | Écriture de 3 tests basés sur les règles métier | 3 tests FAIL |
 | 🟢 GREEN | Création de `PouvoirsMagiquesUpdater` + ajout dans Factory | 3 tests PASS |
-| 🔵 REFACTOR | Ajout de commentaires, documentation | 18+3 = 21 tests PASS |
+| 🔵 REFACTOR | Ajout de commentaires, documentation | 18 tests PASS (dont 3 Pouvoirs magiques) |
 
 ### Pourquoi le Pattern Strategy facilite le TDD
 

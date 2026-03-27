@@ -118,7 +118,7 @@ java -cp src/main/java com.magasin.utils.TestPouvoirsMagiques
 - ✅ **Tests automatisés** (18/18 tests JUnit réussis)
 - ✅ **Documentation complète** (français)
 - ✅ **GitHub Actions** configuré
-- ✅ **Code 100% commenté**
+- ✅ **Code commenté (logique métier)**
 
 ### **Architecture :**
 - ✅ **Principes SOLID** respectés

@@ -48,7 +48,7 @@ for (Item item : items) {
 ### **Partiellement couvert (⚠️)**
 ```java
 // ItemUpdaterFactory.getUpdater() - 90%
-switch (itemName) {
+switch (item.name) {
     case "Comté": return new ComteUpdater();
     case "Kryptonite": return new KryptoniteUpdater();
     // ... autres cas

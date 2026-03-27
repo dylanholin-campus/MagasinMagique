@@ -116,9 +116,9 @@ for (int i = 0; i < items.length; i++) {
 
 **APRÈS** (4 lignes, 0 imbrication) :
 ```java
-for (int i = 0; i < items.length; i++) {
-    ItemUpdater updater = ItemUpdaterFactory.getUpdater(items[i]);
-    updater.update(items[i]);
+for (Item item : items) {
+    ItemUpdater updater = ItemUpdaterFactory.getUpdater(item);
+    updater.update(item);
 }
 ```
 
@@ -171,7 +171,7 @@ java -cp src/main/java com.magasin.utils.GoldenMaster
 
 ### **Nouvelles Fonctionnalités Ajoutées :**
 - ✅ "Pouvoirs magiques" (dégradation 2x plus vite)
-- ✅ Tests unitaires complets (19/19 réussis)
+- ✅ Tests unitaires complets (18/18 réussis)
 - ✅ GitHub Actions configuré
 - ✅ Documentation complète
 
