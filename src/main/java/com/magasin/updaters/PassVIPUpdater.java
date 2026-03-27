@@ -17,29 +17,24 @@ import com.magasin.ItemUpdater;
 public class PassVIPUpdater implements ItemUpdater {
     @Override
     public void update(Item item) {
-        // Étape 1 : Augmentation de la qualité avant le concert
+        // Qualité augmente (max 50) avec bonus selon la proximité du concert
         if (item.quality < 50) {
             item.quality = item.quality + 1;
 
-            // Bonus : +1 supplémentaire si 10 jours ou moins
-            if (item.sellIn < 11) {
-                if (item.quality < 50) {
-                    item.quality = item.quality + 1;
-                }
+            // +1 bonus si 10 jours ou moins
+            if (item.sellIn < 11 && item.quality < 50) {
+                item.quality = item.quality + 1;
             }
 
-            // Bonus : +1 supplémentaire si 5 jours ou moins
-            if (item.sellIn < 6) {
-                if (item.quality < 50) {
-                    item.quality = item.quality + 1;
-                }
+            // +1 bonus si 5 jours ou moins
+            if (item.sellIn < 6 && item.quality < 50) {
+                item.quality = item.quality + 1;
             }
         }
 
-        // Étape 2 : Mise à jour du sellIn
         item.sellIn = item.sellIn - 1;
 
-        // Étape 3 : Après le concert, qualité tombe à 0
+        // Après le concert : qualité tombe à 0
         if (item.sellIn < 0) {
             item.quality = 0;
         }

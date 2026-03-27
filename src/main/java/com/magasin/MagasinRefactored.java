@@ -3,21 +3,18 @@ package com.magasin;
 /**
  * Version refactorée du magasin utilisant le Pattern Strategy.
  * 
- * Comparez cette version avec Magasin.java :
- * - ORIGINAL : 60 lignes, 13 niveaux d'imbrication
- * - REFACTORÉ : 4 lignes, 0 niveau d'imbrication
+ * Chaque type d'item a sa propre stratégie de mise à jour (voir package updaters/).
+ * La Factory {@link ItemUpdaterFactory} sélectionne la bonne stratégie selon le nom de l'item.
  * 
- * Cette classe démontre la puissance du Pattern Strategy !
+ * Pour le code original (legacy), voir {@link Magasin}.
  */
 public class MagasinRefactored {
     
-    /** 
-     * Tableau d'items : même structure que la version originale
-     */
+    /** Tableau d'articles gérés par le magasin. */
     public Item[] items;
 
     /**
-     * Constructeur : identique à la version originale
+     * Constructeur : initialise le magasin avec ses articles.
      * 
      * @param items Tableau d'articles à gérer
      */
@@ -26,31 +23,16 @@ public class MagasinRefactored {
     }
 
     /**
-     * VERSION REFACTORÉE avec Pattern Strategy : 4 lignes !
+     * Met à jour la qualité et le sellIn de tous les items du magasin.
      * 
-     * Logique :
-     * 1. Pour chaque item
-     * 2. Demander à la Factory la bonne stratégie
-     * 3. Appliquer la stratégie
-     * 4. C'est tout ! 🎉
+     * Utilise le Pattern Strategy : chaque type d'item a son propre algorithme
+     * de mise à jour, sélectionné automatiquement par la Factory.
      */
     public void updateQuality() {
-        
-        // Boucle for-each : syntaxe moderne plus lisible
-        // for (Type variable : collection) : parcourt chaque élément
         for (Item item : items) {
-            
-            // Étape 1 : Obtenir la stratégie adaptée à cet item
-            // ItemUpdaterFactory.getUpdater(item) : appel méthode statique
-            // La Factory analyse le nom et retourne la bonne implémentation
+            // La Factory retourne la stratégie adaptée au type d'item
             ItemUpdater updater = ItemUpdaterFactory.getUpdater(item);
-            
-            // Étape 2 : Appliquer la stratégie
-            // Polymorphisme : updater peut être n'importe quelle implémentation
-            // mais on appelle toujours la même méthode update()
             updater.update(item);
-            
-            // Fin de la logique ! Plus besoin de 13 niveaux de if/else !
         }
     }
 }

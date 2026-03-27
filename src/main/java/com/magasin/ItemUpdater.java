@@ -1,24 +1,16 @@
 package com.magasin;
 
 /**
- * Interface Strategy du Pattern Strategy.
+ * Interface Strategy pour la mise à jour des items.
  * 
- * Une interface en Java est un "contrat" qui définit les méthodes
- * que toutes les classes implémentant cette interface doivent fournir.
- * 
- * Pattern Strategy : Permet de définir une famille d'algorithmes
- * interchangeables pour mettre à jour différents types d'items.
+ * Chaque type d'item (Comté, Kryptonite, Pass VIP, etc.) possède
+ * sa propre implémentation avec ses règles métier spécifiques.
+ * Voir le package {@code com.magasin.updaters} pour les implémentations.
  */
 public interface ItemUpdater {
     
     /**
-     * Méthode abstraite que toutes les stratégies doivent implémenter.
-     * 
-     * "abstract" signifie : pas d'implémentation ici, obligatoire
-     * dans les classes concrètes qui implémentent cette interface.
-     * 
-     * Logique métier : chaque type d'item a sa propre façon de
-     * mettre à jour sa qualité et sa date de péremption.
+     * Met à jour la qualité et le sellIn d'un item selon ses règles métier.
      * 
      * @param item L'article à mettre à jour (modifié en place)
      */

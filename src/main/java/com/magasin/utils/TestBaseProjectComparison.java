@@ -4,14 +4,13 @@ import com.magasin.Item;
 import com.magasin.Magasin;
 
 /**
- * Test spécial pour comparer notre comportement avec le projet de base
- * situé dans /home/user/Documents/MagasinMagique-master
+ * Test de comparaison du comportement avec le projet de base.
+ * Affiche les résultats de mise à jour pour chaque type d'item
+ * afin de vérifier la conformité avec le comportement original.
  */
 public class TestBaseProjectComparison {
     public static void main(String[] args) {
-        System.out.println("=== COMPARAISON AVEC LE PROJET DE BASE ===");
-        System.out.println("Projet de référence : /home/user/Documents/MagasinMagique-master");
-        System.out.println("Notre projet : /home/user/Téléchargements/MagasinMagique-master");
+        System.out.println("=== COMPARAISON AVEC LE COMPORTEMENT ORIGINAL ===");
         System.out.println("");
         
         // Test des mêmes cas que le projet original
