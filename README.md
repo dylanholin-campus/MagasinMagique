@@ -34,7 +34,7 @@ java -cp src/main/java com.magasin.utils.ComparisonTest
 Le projet utilise le Pattern Strategy pour remplacer 60 lignes de conditions imbriquées par 4 lignes de code polymorphe :
 
 ```
-Magasin (Context)
+MagasinRefactored (Context)
     ↓
 ItemUpdater (Strategy Interface)
     ↓
