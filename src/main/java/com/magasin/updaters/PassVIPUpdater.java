@@ -41,7 +41,7 @@ public class PassVIPUpdater implements ItemUpdater {
 
         // Étape 3 : Après le concert, qualité tombe à 0
         if (item.sellIn < 0) {
-            item.quality = item.quality - item.quality;
+            item.quality = 0;
         }
     }
 }

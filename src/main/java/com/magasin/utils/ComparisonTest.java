@@ -3,8 +3,6 @@ package com.magasin.utils;
 import com.magasin.Item;
 import com.magasin.Magasin;
 import com.magasin.MagasinRefactored;
-import java.util.ArrayList;
-import java.util.List;
 
 public class ComparisonTest {
     public static void main(String[] args) {

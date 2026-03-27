@@ -4,9 +4,6 @@ import com.magasin.Item;
 import com.magasin.Magasin;
 import com.magasin.MagasinRefactored;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class SimpleTestRunner {
     private static int testsPassed = 0;
     private static int testsFailed = 0;

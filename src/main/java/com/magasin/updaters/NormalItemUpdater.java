@@ -53,14 +53,6 @@ public class NormalItemUpdater implements ItemUpdater {
             item.quality = item.quality - 1;
         }
         
-        // Étape 4 : Protection contre les qualités négatives
-        // Condition : si la qualité est devenue négative
-        // < 0 : opérateur "plus petit que"
-        if (item.quality < 0) {
-            // Action : forcer la qualité à 0 (règle métier)
-            item.quality = 0;
-        }
-        
         // Fin de la mise à jour pour un item normal !
         // Logique simple, lisible, et testable unitairement.
     }
